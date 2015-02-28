@@ -20,8 +20,22 @@ function randomPlay() {
 ////////////////////////////////////////////////
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
-
 function getPlayerMove(move) {
+	switch (move) {
+		case "rock":
+			playerMove = "rock";
+			break;
+		case "paper":
+			playerMove = "paper";
+			break;
+		case "scissors":
+			playerMove = "scissors";
+			break;
+		default:
+			getInput();
+			break;
+	}
+}
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
