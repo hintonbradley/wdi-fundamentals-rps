@@ -21,7 +21,40 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 function getPlayerMove(move) {
-	switch (move) {
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
+    return /* Your Expression */	
+    switch (move) {
+		case "rock":
+			playerMove = "rock";
+			break;
+		case "paper":
+			playerMove = "paper";
+			break;
+		case "scissors":
+			playerMove = "scissors";
+			break;
+		case 0:
+			console.log("I'm sorry you don't want to play.");
+			break;
+		default:
+			getInput();
+			break;
+	};
+/* or could possibly use code below in place of switch, but player would be able to input any word not just the three options allowed
+	if (move === 'undefined' || move === 'null') {
+		move = getInput();
+	}
+*/
+}
+
+function getComputerMove(move) {
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
+    return /* Your Expression */
+    switch (move) {
 		case "rock":
 			playerMove = "rock";
 			break;
@@ -32,21 +65,14 @@ function getPlayerMove(move) {
 			playerMove = "scissors";
 			break;
 		default:
-			getInput();
+			randomPlay();
 			break;
+	};
+/* or could possibly use code below in place of switch, but player would be able to input any word not just the three options allowed
+	if (move === 'undefined' || move === 'null') {
+		move = getInput();
 	}
-}
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
-}
-
-function getComputerMove(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+*/
 }
 
 function getWinner(playerMove,computerMove) {
