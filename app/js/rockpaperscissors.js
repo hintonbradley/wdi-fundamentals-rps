@@ -5,15 +5,19 @@
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
+    console.log("You chose ")
     return prompt();
 }
 function randomPlay() {
     var randomNumber = Math.random();
     if (randomNumber < 0.33) {
+    	console.log("The computer chose rock");
         return "rock";
     } else if (randomNumber < 0.66) {
+    	console.log("The computer chose paper");
         return "paper";
     } else {
+    	console.log("The computer chose scissors");
         return "scissors";
     }
 }
