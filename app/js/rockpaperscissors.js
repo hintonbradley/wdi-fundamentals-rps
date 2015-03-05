@@ -167,8 +167,16 @@ function playToFive(placeholder) {
     	else {
     	console.log("You beat the computer " + playerWins + " to " + computerWins + "! " + thanks);
     	}
-    	
-    
+    function playAgain() {
+    console.log("Would you like to play again?.")
+    return prompt();
+}
+    if (playAgain()==="yes") {
+        playToFive();
+    }
+    else {
+        return "Good-bye."
+    }
 }
 playToFive();
       
