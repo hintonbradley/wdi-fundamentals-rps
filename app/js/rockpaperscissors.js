@@ -160,7 +160,15 @@ function playToFive(placeholder) {
        console.log("Computer wins: " + computerWins);
        console.log("Player wins: " + playerWins);
     }
-console.log("Thanks for playing!")
+    var thanks = "Thanks for playing!";
+    if (computerWins > playerWins) {
+    	console.log("The computer beat you " + computerWins + " to " + playerWins + ". " + thanks);
+    	}
+    	else {
+    	console.log("You beat the computer " + playerWins + " to " + computerWins + "! " + thanks);
+    	}
+    	
+    
 }
 playToFive();
       
