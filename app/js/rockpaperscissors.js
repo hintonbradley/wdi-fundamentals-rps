@@ -8,6 +8,7 @@ function getInput() {
     console.log("You chose ")
     return prompt();
 }
+/*Code added to function below to test what the randomPlay output is. (Used to confirm winner.)*/
 function randomPlay() {
     var randomNumber = Math.random();
     if (randomNumber < 0.33) {
@@ -28,57 +29,43 @@ function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */ move?move:getInput();
-}  
-    /*	
+    return /* Your Expression*/  move?move:getInput();
+}
+/*Or if you were to comment out the above statement: (return \/* Your Expression*\/  move?move:getInput();
+}) the switch statement below would work.
+*/
+/*
     switch (move) {
-		case "rock":
-			return "rock";
-			break;
-		case "paper":
-			return = "paper";
-			break;
-		case "scissors":
-			return = "scissors";
-			break;
-		case 0:
-			console.log("I'm sorry you don't want to play.");
-			break;
+		case move = "rock":
+			 return "rock";
+		case move = "paper":
+			return "paper";
+		case move = "scissors":
+			return "scissors";
 		default:
 			return getInput();
-			break;
-	};
-*/
-/* or could possibly use code below in place of switch, but player would be able to input any word not just the three options allowed
-	if (move === 'undefined' || move === 'null') {
-		move = getInput();
 	}
+}
 */
 function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
     return /* Your Expression */move?move:randomPlay();
-}   
-/*    switch (move) {
-		case "rock":
-			return "rock";
-			break;
-		case "paper":
+}
+/* Or switch statement below could be used in lieu of return expression above: */
+/*
+switch (move) {
+		case move = "rock":
+			 return "rock";
+		case move = "paper":
 			return "paper";
-			break;
-		case "scissors":
+		case move = "scissors":
 			return "scissors";
-			break;
 		default:
-			randomPlay();
-			break;
-	};
-*/
-/* or could possibly use code below in place of switch, but player would be able to input any word not just the three options allowed
-	if (move === 'undefined' || move === 'null') {
-		move = getInput();
+			return randomPlay();
 	}
+}
 */
 function getWinner(playerMove,computerMove) {
     var winner;
@@ -116,27 +103,6 @@ function getWinner(playerMove,computerMove) {
     return winner;
 }
 
-/* 
-function playToFive(placeholder) {
-    console.log("Let's play Rock, Paper, Scissors");
-    var playerWins = 0;
-    var computerWins = 0;
-    // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.*/
-    /* YOUR CODE HERE */
-/*       do {
-            var newGame=getWinner(getPlayerMove(),getComputerMove());
-            if (newGame ==="tie"){
-                return "tie";
-            }
-            else {
-                return "player";
-            }
-        }
-    while (1>10);
-}
-
-playToFive();
-*/
 
 function playToFive(placeholder) {
     console.log("Let's play Rock, Paper, Scissors");
@@ -175,60 +141,7 @@ function playToFive(placeholder) {
         playToFive();
     }
     else {
-        return "Good-bye."
+        console.log('Thanks for playing. Good-bye.');
     }
 }
 playToFive();
-      
-      
-      
-      
-      
-      
-/*      
-    while ((computerWins<5)&&(playerWins<5)) {
-        newGame=getWinner(getPlayerMove(),getComputerMove());
-        if (newGame = "computer") {
-        computerWins=computerWins + 1;
-       }
-       else if (newGame = "player") {
-           playerWins=playerWins + 1;
-       }
-       else {
-           computerWins = computerWins;
-           playerWins = playerWins;
-       }
-    }
-}
-playToFiveTwo();
-
-
-
-
-
-/*
-playToFive();
-       
-       do {
-     statement(s)
-} while (expression);
-       
-       
-       
-       
-       
-/*    
-        if (placeholder==="Player") {
-            playerWins += playerWins;
-        }
-        else if (placeholder==="Computer") {
-            computerWins+=computerWins;
-        }
-        else {
-            computerWins = computerWins;
-            playerWins = playerWins;
-        }
-    getWinner(getPlayerMove(),getComputerMove());    
-    }
-}
-*/
