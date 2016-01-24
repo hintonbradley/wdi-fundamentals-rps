@@ -12,7 +12,7 @@ function getInput() {
 function randomPlay() {
     var randomNumber = Math.random();
     if (randomNumber < 0.33) {
-    	console.log("The computer chose rock");
+    	console.log("The computerr chose rock");
         return "rock";
     } else if (randomNumber < 0.66) {
     	console.log("The computer chose paper");
